@@ -104,13 +104,12 @@ int replace_alias(info_t *info)
  *
  * Return: 1 if replaced, 0 otherwise
  */
-nt replace_vars(info_t *info)
-
+int replace_vars(info_t *info)
 {
 	int i = 0;
 	list_t *node;
 
-	or (i = 0; info->argv[i]; i++)
+	for (i = 0; info->argv[i]; i++)
 
 	{
 		if (info->argv[i][0] != '$' || !info->argv[i][1])
